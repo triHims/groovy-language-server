@@ -71,10 +71,26 @@
           "default": null,
           "description": "Specifies the folder path to the JDK. Use this setting if the extension cannot find Java automatically."
         },
+        "groovy.targetDirectory": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Specifies the folder what compiler output files should reside. NOTE: This directory will be ignored"
+        },
         "groovy.classpath": {
           "type": "array",
           "default": null,
           "description": "Specifies additional entries to add to the classpath. May contain both folders and individual .jar files.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "groovy.ignoredDirectory": {
+          "type": "array",
+          "default": null,
+          "description": "Specifies directories that should be ignored",
           "items": {
             "type": "string"
           }
